@@ -1,4 +1,48 @@
 <ul class="sidebar-nav" data-coreui="navigation" data-simplebar>
+
+    @admin
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('admin.home') }}">
+            <svg class="nav-icon">
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-speedometer') }}"></use>
+            </svg>
+            {{ __('Dashboard') }}
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('virtual-gallery.index') }}">
+            <svg class="nav-icon">
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-speedometer') }}"></use>
+            </svg>
+            {{ __('Virtual Gallery') }}
+        </a>
+    </li>
+
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('art.index') }}">
+            <svg class="nav-icon">
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-user') }}"></use>
+            </svg>
+            {{ __('Pending Arts') }}
+        </a>
+    </li>
+
+    {{-- <li class="nav-item">
+        <a class="nav-link" href="{{ route('users.index') }}">
+            <svg class="nav-icon">
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-user') }}"></use>
+            </svg>
+            {{ __('Users') }}
+        </a>
+    </li> --}}
+
+    @endadmin
+
+    @client
+
     <li class="nav-item">
         <a class="nav-link" href="{{ route('home') }}">
             <svg class="nav-icon">
@@ -9,13 +53,16 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('users.index') }}">
+        <a class="nav-link" href="{{ route('virtual-gallery.index') }}">
             <svg class="nav-icon">
-                <use xlink:href="{{ asset('icons/coreui.svg#cil-user') }}"></use>
+                <use xlink:href="{{ asset('icons/coreui.svg#cil-speedometer') }}"></use>
             </svg>
-            {{ __('Users') }}
+            {{ __('Virtual Gallery') }}
         </a>
     </li>
+
+
+    @endclient
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('about') }}">
@@ -26,7 +73,7 @@
         </a>
     </li>
 
-    <li class="nav-group" aria-expanded="false">
+    {{-- <li class="nav-group" aria-expanded="false">
         <a class="nav-link nav-group-toggle" href="#">
             <svg class="nav-icon">
                 <use xlink:href="{{ asset('icons/coreui.svg#cil-star') }}"></use>
@@ -43,5 +90,5 @@
                 </a>
             </li>
         </ul>
-    </li>
+    </li> --}}
 </ul>

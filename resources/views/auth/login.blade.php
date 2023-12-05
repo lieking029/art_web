@@ -1,9 +1,9 @@
 @extends('layouts.guest')
 
 @section('content')
-    <div class="col-lg-8">
+    <div class="col-lg-6 ">
         <div class="card-group d-block d-md-flex row">
-            <div class="card col-md-7 p-4 mb-0">
+            <div class="card col-md-7 p-4 mb-0 bg-transparent rounded-4 text-white" style="backdrop-filter: blur(10px); background-color: rgba(255, 255, 255, 0.1); border: 2px solid white">
                 <div class="card-body">
                     <h1>{{ __('Login') }}</h1>
                     <form action="{{ route('login') }}" method="POST">
@@ -35,25 +35,16 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <button class="btn btn-primary px-4" type="submit">{{ __('Login') }}</button>
+                                <button class="btn btn-dark px-4" type="submit">{{ __('Login') }}</button>
                             </div>
-                            @if (Route::has('password.request'))
+                            {{-- @if (Route::has('password.request'))
                                 <div class="col-6 text-end">
                                     <a href="{{ route('password.request') }}" class="btn btn-link px-0"
                                        type="button">{{ __('Forgot Your Password?') }}</a>
                                 </div>
-                            @endif
+                            @endif --}}
                         </div>
                     </form>
-                </div>
-            </div>
-            <div class="card col-md-5 text-white bg-primary py-5">
-                <div class="card-body text-center">
-                    <div>
-                        <h2>{{ __('Sign up') }}</h2>
-                        <a href="{{ route('register') }}"
-                           class="btn btn-lg btn-outline-light mt-3">{{ __('Register') }}</a>
-                    </div>
                 </div>
             </div>
         </div>
